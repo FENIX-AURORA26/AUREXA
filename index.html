@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AUREXA OS</title>
 
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4712/4712027.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -12,88 +14,85 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 font-family:'Inter',sans-serif;
 }
 
 body{
-background: radial-gradient(circle at 30% 20%, #102030, #070c14 70%);
+background:#060b14;
 color:#e6faff;
-min-height:100vh;
+overflow-x:hidden;
+}
+
+/* Header */
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 50px;
+background:rgba(10,15,25,0.7);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+header h2{
+font-family:'Orbitron',sans-serif;
+color:#00f5d4;
+}
+
+nav a{
+color:#b0c4de;
+margin-left:25px;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f5d4;
+}
+
+/* Hero */
+.hero{
+height:100vh;
 display:flex;
 flex-direction:column;
+justify-content:center;
 align-items:center;
 text-align:center;
-overflow-x:hidden;
 position:relative;
+overflow:hidden;
 }
 
-/* Partículas animadas */
-body::before{
-content:"";
+canvas{
 position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
-background-image:radial-gradient(#00f5d4 1px, transparent 1px);
-background-size:40px 40px;
-opacity:0.05;
-animation:moveBg 60s linear infinite;
-z-index:0;
+z-index:-1;
 }
 
-@keyframes moveBg{
-from{transform:translateY(0);}
-to{transform:translateY(-100px);}
-}
-
-.container{
-position:relative;
-z-index:1;
-margin-top:120px;
-max-width:900px;
-padding:20px;
-}
-
-.logo-circle{
-width:130px;
-height:130px;
-border-radius:50%;
-border:3px solid #00f5d4;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:52px;
+.hero h1{
 font-family:'Orbitron',sans-serif;
-color:#00f5d4;
-box-shadow:0 0 30px #00f5d4;
-animation:pulse 4s infinite ease-in-out;
-margin:0 auto 30px auto;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 15px #00f5d4;}
-50%{box-shadow:0 0 50px #00f5d4;}
-100%{box-shadow:0 0 15px #00f5d4;}
-}
-
-h1{
-font-family:'Orbitron',sans-serif;
-font-size:68px;
+font-size:70px;
 letter-spacing:8px;
 color:#00f5d4;
-margin-bottom:15px;
 }
 
 .subtitle{
-font-size:20px;
-color:#b0c4de;
-margin-bottom:50px;
+margin-top:15px;
+color:#7dd3fc;
 }
 
 .download-btn{
+margin-top:40px;
 background:linear-gradient(90deg,#00f5d4,#00bbf9);
-padding:18px 55px;
+padding:18px 60px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-size:18px;
 font-weight:600;
 color:#001219;
@@ -107,27 +106,21 @@ transform:scale(1.08);
 box-shadow:0 0 60px rgba(0,245,212,1);
 }
 
-.version{
-margin-top:15px;
-font-size:14px;
-color:#7dd3fc;
-opacity:0.8;
+/* Sections */
+section{
+padding:120px 10%;
 }
 
-.section{
-margin-top:120px;
-}
-
-.section h2{
+section h2{
 font-family:'Orbitron',sans-serif;
-font-size:30px;
-margin-bottom:30px;
 color:#00bbf9;
+margin-bottom:40px;
+text-align:center;
 }
 
-.features{
+.features, .screenshots{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
@@ -145,73 +138,113 @@ transform:translateY(-10px) scale(1.02);
 box-shadow:0 0 40px rgba(0,245,212,0.8);
 }
 
-.card h3{
-margin-bottom:10px;
-font-size:20px;
-}
-
-.card p{
-font-size:15px;
-opacity:0.8;
+.screenshot{
+height:180px;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+border-radius:16px;
 }
 
 footer{
-margin:120px 0 40px 0;
-font-size:14px;
+text-align:center;
+padding:40px;
 color:#8892b0;
-opacity:0.7;
+}
+
+/* Responsivo */
+@media(max-width:768px){
+.hero h1{
+font-size:45px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+<h2>AUREXA</h2>
+<nav>
+<a href="#features">Features</a>
+<a href="#screens">Screenshots</a>
+<a href="#roadmap">Roadmap</a>
+</nav>
+</header>
 
-<div class="logo-circle">A</div>
-
+<div class="hero">
+<canvas id="stars"></canvas>
 <h1>AUREXA</h1>
 <p class="subtitle">NeoCosmic Industrial Distribution</p>
-
-<a href="#">
+<a href="SUA_ISO_AQUI.iso">
 <button class="download-btn">Download Oficial</button>
 </a>
+</div>
 
-<div class="version">Versão 1.0.0 • Build Estável</div>
-
-<div class="section">
+<section id="features">
 <h2>Características</h2>
-
 <div class="features">
+<div class="card"><h3>⚡ Performance</h3><p>Arch otimizado com foco extremo em fluidez.</p></div>
+<div class="card"><h3>🎨 Identidade</h3><p>Visual NeoCosmic Industrial imersivo.</p></div>
+<div class="card"><h3>🔐 Segurança</h3><p>Repositório assinado e build automatizado.</p></div>
+<div class="card"><h3>🚀 Evolução</h3><p>Projeto em constante expansão.</p></div>
+</div>
+</section>
 
-<div class="card">
-<h3>⚡ Performance</h3>
-<p>Base Arch otimizada para velocidade real e fluidez absoluta.</p>
+<section id="screens">
+<h2>Screenshots</h2>
+<div class="screenshots">
+<div class="screenshot"></div>
+<div class="screenshot"></div>
+<div class="screenshot"></div>
 </div>
+</section>
 
-<div class="card">
-<h3>🎨 Identidade</h3>
-<p>Design NeoCosmic Industrial com profundidade e presença visual.</p>
+<section id="roadmap">
+<h2>Roadmap 2026</h2>
+<div class="features">
+<div class="card"><h3>v1.1</h3><p>Instalador gráfico oficial.</p></div>
+<div class="card"><h3>v1.5</h3><p>Repositório próprio estável.</p></div>
+<div class="card"><h3>v2.0</h3><p>Build automatizado completo.</p></div>
 </div>
-
-<div class="card">
-<h3>🔐 Segurança</h3>
-<p>Build automatizado, repositório assinado e arquitetura sólida.</p>
-</div>
-
-<div class="card">
-<h3>🚀 Evolução</h3>
-<p>Roadmap ativo com melhorias contínuas e visão de longo prazo.</p>
-</div>
-
-</div>
-</div>
-
-</div>
+</section>
 
 <footer>
 © 2026 AUREXA Project • FENIX-AURORA26
 </footer>
+
+<script>
+const canvas=document.getElementById("stars");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let stars=[];
+for(let i=0;i<120;i++){
+stars.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+radius:Math.random()*1.5,
+speed:Math.random()*0.5
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+ctx.fillStyle="#00f5d4";
+stars.forEach(star=>{
+ctx.beginPath();
+ctx.arc(star.x,star.y,star.radius,0,Math.PI*2);
+ctx.fill();
+star.y+=star.speed;
+if(star.y>canvas.height){
+star.y=0;
+star.x=Math.random()*canvas.width;
+}
+});
+requestAnimationFrame(draw);
+}
+
+draw();
+</script>
 
 </body>
 </html>
