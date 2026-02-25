@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AUREXA OS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -16,43 +16,69 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background: radial-gradient(circle at top, #0f2027, #0a0f1c 60%);
+background: radial-gradient(circle at 30% 20%, #102030, #070c14 70%);
 color:#e6faff;
 min-height:100vh;
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
 text-align:center;
 overflow-x:hidden;
+position:relative;
+}
+
+/* Partículas animadas */
+body::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background-image:radial-gradient(#00f5d4 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.05;
+animation:moveBg 60s linear infinite;
+z-index:0;
+}
+
+@keyframes moveBg{
+from{transform:translateY(0);}
+to{transform:translateY(-100px);}
+}
+
+.container{
+position:relative;
+z-index:1;
+margin-top:120px;
+max-width:900px;
+padding:20px;
 }
 
 .logo-circle{
-width:120px;
-height:120px;
+width:130px;
+height:130px;
 border-radius:50%;
 border:3px solid #00f5d4;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:48px;
+font-size:52px;
 font-family:'Orbitron',sans-serif;
 color:#00f5d4;
-box-shadow:0 0 25px #00f5d4;
-animation:pulse 3s infinite ease-in-out;
-margin-bottom:30px;
+box-shadow:0 0 30px #00f5d4;
+animation:pulse 4s infinite ease-in-out;
+margin:0 auto 30px auto;
 }
 
 @keyframes pulse{
-0%{box-shadow:0 0 10px #00f5d4;}
-50%{box-shadow:0 0 40px #00f5d4;}
-100%{box-shadow:0 0 10px #00f5d4;}
+0%{box-shadow:0 0 15px #00f5d4;}
+50%{box-shadow:0 0 50px #00f5d4;}
+100%{box-shadow:0 0 15px #00f5d4;}
 }
 
 h1{
 font-family:'Orbitron',sans-serif;
-font-size:64px;
-letter-spacing:6px;
+font-size:68px;
+letter-spacing:8px;
 color:#00f5d4;
 margin-bottom:15px;
 }
@@ -60,70 +86,87 @@ margin-bottom:15px;
 .subtitle{
 font-size:20px;
 color:#b0c4de;
-margin-bottom:40px;
+margin-bottom:50px;
 }
 
 .download-btn{
 background:linear-gradient(90deg,#00f5d4,#00bbf9);
-padding:15px 45px;
+padding:18px 55px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 font-size:18px;
 font-weight:600;
 color:#001219;
 cursor:pointer;
 transition:0.3s;
-box-shadow:0 0 20px rgba(0,245,212,0.5);
+box-shadow:0 0 25px rgba(0,245,212,0.6);
 }
 
 .download-btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 40px rgba(0,245,212,0.9);
+transform:scale(1.08);
+box-shadow:0 0 60px rgba(0,245,212,1);
+}
+
+.version{
+margin-top:15px;
+font-size:14px;
+color:#7dd3fc;
+opacity:0.8;
 }
 
 .section{
-margin-top:80px;
-max-width:800px;
-padding:0 20px;
+margin-top:120px;
 }
 
 .section h2{
 font-family:'Orbitron',sans-serif;
-font-size:28px;
-margin-bottom:20px;
+font-size:30px;
+margin-bottom:30px;
 color:#00bbf9;
 }
 
 .features{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:30px;
-margin-top:30px;
 }
 
 .card{
-background:#111827;
-padding:25px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,187,249,0.2);
-transition:0.3s;
+background:rgba(17,24,39,0.8);
+backdrop-filter:blur(8px);
+padding:30px;
+border-radius:16px;
+box-shadow:0 0 20px rgba(0,187,249,0.2);
+transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(0,245,212,0.6);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 40px rgba(0,245,212,0.8);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+font-size:15px;
+opacity:0.8;
 }
 
 footer{
-margin-top:80px;
-margin-bottom:20px;
+margin:120px 0 40px 0;
 font-size:14px;
 color:#8892b0;
+opacity:0.7;
 }
 </style>
 </head>
 
 <body>
+
+<div class="container">
 
 <div class="logo-circle">A</div>
 
@@ -134,25 +177,36 @@ color:#8892b0;
 <button class="download-btn">Download Oficial</button>
 </a>
 
+<div class="version">Versão 1.0.0 • Build Estável</div>
+
 <div class="section">
 <h2>Características</h2>
 
 <div class="features">
+
 <div class="card">
 <h3>⚡ Performance</h3>
-<p>Base Arch otimizada para máxima leveza e velocidade.</p>
+<p>Base Arch otimizada para velocidade real e fluidez absoluta.</p>
 </div>
 
 <div class="card">
 <h3>🎨 Identidade</h3>
-<p>Visual NeoCosmic Industrial exclusivo e minimalista.</p>
+<p>Design NeoCosmic Industrial com profundidade e presença visual.</p>
 </div>
 
 <div class="card">
 <h3>🔐 Segurança</h3>
-<p>Repositório assinado e build automatizado.</p>
+<p>Build automatizado, repositório assinado e arquitetura sólida.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Evolução</h3>
+<p>Roadmap ativo com melhorias contínuas e visão de longo prazo.</p>
+</div>
+
 </div>
 </div>
+
 </div>
 
 <footer>
