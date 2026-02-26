@@ -1,0 +1,15 @@
+name: Build AUREXA ISO
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install archiso
+        run: sudo apt-get install archiso
+      - name: Build ISO
+        run: sudo mkarchiso -v profile
