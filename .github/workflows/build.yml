@@ -1,5 +1,3 @@
-name: Build AUREXA ISO
-
 on:
   push:
     branches: [ main ]
@@ -16,14 +14,21 @@ jobs:
         run: pacman -Syu --noconfirm
 
       - name: Instalar dependências
-        run: pacman -S --noconfirm archiso git sudo
+        run: pacman -S --noconfirm archiso git base-devel
 
       - name: Checkout do repositório
         uses: actions/checkout@v3
 
+      - name: Preparar profile
+        run: |
+          # Se o profile não existe, criar ou copiar
+          ls -la profile/ || echo "Profile não encontrado"
+
       - name: Gerar ISO
         run: |
-          mkarchiso -v profile
+          cd profile
+          mkarchiso -v .
+          ls -la out/
 
       - name: Upload ISO como artifact
         uses: actions/upload-artifact@v3
