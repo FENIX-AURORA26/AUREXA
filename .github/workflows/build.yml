@@ -7,9 +7,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    container:
+      image: archlinux:latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Install archiso
-        run: sudo apt-get install archiso
-      - name: Build ISO
-        run: sudo mkarchiso -v profile
+      - name: Atualizar sistema
+        run: pacman -Syu --noconfirm
+
+      - name: Instalar dependências
+        run: pacman -S --noconfirm archiso git sudo
+
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Gerar ISO
+        run: |
+          mkarchiso -v profile
+
+      - name: Upload ISO como artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: AUREXA-ISO
+          path: profile/out/*.iso
