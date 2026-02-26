@@ -30,8 +30,8 @@ jobs:
           mkarchiso -v .
           ls -la out/
 
-      - name: Upload ISO como artifact
-  uses: actions/upload-artifact@v4
-  with:
-    name: AUREXA-ISO
-    path: profile/out/*.iso
+            - name: Upload ISO como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AUREXA-ISO
+          path: profile/out/*.iso
