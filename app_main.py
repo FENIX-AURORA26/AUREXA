@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication # type: ignore
+from PyQt5.QtWidgets import QApplication 
 from ui.theme import aplicar_tema
 from ui.login import Login
 from ui.main_window import MainWindow
