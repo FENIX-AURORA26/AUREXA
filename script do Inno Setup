@@ -1,0 +1,17 @@
+[Setup]
+AppName=AUREXA CORE
+AppVersion=1.0
+DefaultDirName={pf}\AUREXA
+DefaultGroupName=AUREXA
+OutputDir=dist_installer
+OutputBaseFilename=AUREXA_Setup
+
+[Files]
+Source: "dist\app_main.exe"; DestDir: "{app}"
+
+[Icons]
+Name: "{group}\AUREXA"; Filename: "{app}\app_main.exe"
+Name: "{commondesktop}\AUREXA"; Filename: "{app}\app_main.exe"
+
+[Run]
+Filename: "{app}\app_main.exe"; Description: "Abrir AUREXA"
