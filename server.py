@@ -1,11 +1,10 @@
-from flask import Flask, request, jsonify 
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# Banco simples (depois vira banco real)
 licencas = {
-    "AUREXA-1234": True,
-    "AUREXA-PRO-9999": True
+    "CLIENTE-001": True,
+    "AUREXA-OWNER-777": True
 }
 
 @app.route("/verificar", methods=["POST"])
