@@ -15,4 +15,5 @@ aplicar_tema(app)
 login = Login(abrir_main)
 login.show()
 input("Pressione ENTER para sair...")
+
 sys.exit(app.exec_())
