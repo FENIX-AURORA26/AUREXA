@@ -950,6 +950,10 @@
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\exceptions.py',
    'PYMODULE'),
+  ('requests.help',
+   'C:\\Users\\karog\\OneDrive '
+   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\help.py',
+   'PYMODULE'),
   ('requests.hooks',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\hooks.py',
