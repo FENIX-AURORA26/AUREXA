@@ -3,107 +3,6 @@
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\__init__.py',
    'PYMODULE'),
-  ('PyQt5.Qt5', '-', 'PYMODULE'),
-  ('PyQt5.pylupdate_main',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\pylupdate_main.py',
-   'PYMODULE'),
-  ('PyQt5.pyrcc_main',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\pyrcc_main.py',
-   'PYMODULE'),
-  ('PyQt5.uic',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\__init__.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\__init__.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.compiler',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\compiler.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.indenter',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\indenter.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.misc',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\misc.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.proxy_metaclass',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\proxy_metaclass.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.qobjectcreator',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\qobjectcreator.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Compiler.qtproxies',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Compiler\\qtproxies.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Loader',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Loader\\__init__.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Loader.loader',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Loader\\loader.py',
-   'PYMODULE'),
-  ('PyQt5.uic.Loader.qobjectcreator',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\Loader\\qobjectcreator.py',
-   'PYMODULE'),
-  ('PyQt5.uic.driver',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\driver.py',
-   'PYMODULE'),
-  ('PyQt5.uic.exceptions',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\exceptions.py',
-   'PYMODULE'),
-  ('PyQt5.uic.icon_cache',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\icon_cache.py',
-   'PYMODULE'),
-  ('PyQt5.uic.objcreator',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\objcreator.py',
-   'PYMODULE'),
-  ('PyQt5.uic.port_v3',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\port_v3\\__init__.py',
-   'PYMODULE'),
-  ('PyQt5.uic.port_v3.as_string',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\port_v3\\as_string.py',
-   'PYMODULE'),
-  ('PyQt5.uic.port_v3.ascii_upper',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\port_v3\\ascii_upper.py',
-   'PYMODULE'),
-  ('PyQt5.uic.port_v3.proxy_base',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\port_v3\\proxy_base.py',
-   'PYMODULE'),
-  ('PyQt5.uic.port_v3.string_io',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\port_v3\\string_io.py',
-   'PYMODULE'),
-  ('PyQt5.uic.properties',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\properties.py',
-   'PYMODULE'),
-  ('PyQt5.uic.pyuic',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\pyuic.py',
-   'PYMODULE'),
-  ('PyQt5.uic.uiparser',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\uic\\uiparser.py',
-   'PYMODULE'),
   ('__future__',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\__future__.py',
    'PYMODULE'),
@@ -805,9 +704,6 @@
   ('opcode',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\opcode.py',
    'PYMODULE'),
-  ('optparse',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\optparse.py',
-   'PYMODULE'),
   ('packaging',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\packaging\\__init__.py',
@@ -949,10 +845,6 @@
   ('requests.exceptions',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\exceptions.py',
-   'PYMODULE'),
-  ('requests.help',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\help.py',
    'PYMODULE'),
   ('requests.hooks',
    'C:\\Users\\karog\\OneDrive '
@@ -1826,21 +1718,6 @@
    'PYMODULE'),
   ('xml',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\__init__.py',
-   'PYMODULE'),
-  ('xml.etree',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\etree\\__init__.py',
-   'PYMODULE'),
-  ('xml.etree.ElementInclude',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\etree\\ElementInclude.py',
-   'PYMODULE'),
-  ('xml.etree.ElementPath',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\etree\\ElementPath.py',
-   'PYMODULE'),
-  ('xml.etree.ElementTree',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\etree\\ElementTree.py',
-   'PYMODULE'),
-  ('xml.etree.cElementTree',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\etree\\cElementTree.py',
    'PYMODULE'),
   ('xml.parsers',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\xml\\parsers\\__init__.py',
