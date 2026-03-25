@@ -1,6 +1,5 @@
 import smtplib
 from email.mime.text import MIMEText
-
 def enviar_suporte(mensagem):
     email = "luna_site@fenix-boreal.com.br"
     senha = "SENHA_EMAIL"
