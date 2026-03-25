@@ -5,7 +5,7 @@ def verificar_licenca(email, chave):
    
     try:
         r = requests.post(
-            "http://SEU_SERVIDOR:5000/verificar",
+            "http://localhost:5000/verificar",
             json={"chave": chave}
         )
         return r.json()["status"] == "ok"
