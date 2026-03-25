@@ -1,6 +1,7 @@
 import requests # type: ignore
 
-def verificar_licenca_online(chave):
+def verificar_licenca(email, chave):
+    return True:
     try:
         r = requests.post(
             "http://SEU_SERVIDOR:5000/verificar",
