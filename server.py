@@ -1,11 +1,11 @@
-from flask import Flask, request, jsonify # type: ignore
+from flask import Flask, request, jsonify # pyright: ignore[reportMissingImports]
 
 app = Flask(__name__)
 
-# banco simples (depois pode virar banco real)
+# Banco simples (depois vira banco real)
 licencas = {
-    "AUREXA-PRO-9999": True,
-    "AUREXA-TESTE": True
+    "AUREXA-1234": True,
+    "AUREXA-PRO-9999": True
 }
 
 @app.route("/verificar", methods=["POST"])
