@@ -901,11 +901,11 @@
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\PyQt5\\QtWidgets.pyd',
    'EXTENSION'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\VCRUNTIME140_1.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('libcrypto-3.dll',
    'C:\\Users\\karog\\AppData\\Local\\Programs\\Python\\Python314\\DLLs\\libcrypto-3.dll',
@@ -10327,33 +10327,33 @@
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\requests\\utils.py',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
-   'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
    'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
-   'C:\\Users\\karog\\OneDrive '
-   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
-   'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
    'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'C:\\Users\\karog\\OneDrive '
+   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
    'C:\\Users\\karog\\OneDrive '
    '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'C:\\Users\\karog\\OneDrive '
+   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'C:\\Users\\karog\\OneDrive '
+   '1\\Desktop\\AUREXA\\.venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
    'DATA'),
   ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
    'C:\\Users\\karog\\OneDrive '
