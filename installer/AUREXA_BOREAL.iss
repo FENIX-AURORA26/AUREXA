@@ -1,8 +1,8 @@
-#define MyAppName "AUREXA_BOREAL"
+#define MyAppName "KVP_STUDIO"
 #define MyAppVersion "1.0.0"
-#define MyAppPublisher "Fenix Boreal"
-#define MyAppURL "https://fenix-boreal.com.br"
-#define MyAppExeName "AUREXA_BOREAL.exe"
+#define MyAppPublisher "KVP"
+#define MyAppURL "https://aurexa-api.onrender.com"
+#define MyAppExeName "KVP_STUDIO.exe"
 #define MyAppDistDir "..\dist"
 
 [Setup]
@@ -18,7 +18,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 LicenseFile=
 OutputDir=..\installer_output
-OutputBaseFilename=AUREXA_BOREAL_Setup
+OutputBaseFilename=KVP_STUDIO_Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

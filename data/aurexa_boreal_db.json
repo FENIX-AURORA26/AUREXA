@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "AUREXA_BOREAL"
+    "name": "KVP_STUDIO"
   },
   "plans": [
     {
@@ -16,39 +16,36 @@
     {
       "id": "premium",
       "name": "Premium",
-      "price_brl": 29.9,
+      "price_brl": 39.9,
       "features": [
         "Otimizacao completa",
         "IA com respostas aprimoradas",
-        "Suporte prioritario"
+        "Suporte prioritario",
+        "Publicacao de apps com marca KVP"
       ]
     },
     {
       "id": "pro",
       "name": "Pro",
-      "price_brl": 79.9,
+      "price_brl": 99.9,
       "features": [
         "Todos os recursos Premium",
         "Multi dispositivo",
-        "Relatorios e gestao avancada"
+        "Relatorios e gestao avancada",
+        "Workspace para criar e vender apps"
       ]
     }
   ],
   "users": [
     {
-      "name": "Luna Boreal",
-      "email": "luna_site@fenix-boreal.com.br",
-      "password": "AurexaBoreal@123",
+      "name": "Karollyne Pinheiro",
+      "email": "karollyne.pinheiro@fenix-boreal.com.br",
+      "password": "KvpStudio@2026",
       "role": "owner",
       "plan": "pro",
-      "license_key": "AUREXA-OWNER-777",
+      "license_key": "KVP-OWNER-777",
       "status": "active",
-      "devices": [
-        {
-          "device_name": "test-device",
-          "platform": "Windows"
-        }
-      ]
+      "devices": []
     },
     {
       "name": "Cliente Free",
@@ -56,7 +53,7 @@
       "password": "free123",
       "role": "user",
       "plan": "free",
-      "license_key": "AUREXA-FREE-001",
+      "license_key": "KVP-FREE-001",
       "status": "active",
       "devices": []
     },
@@ -66,7 +63,7 @@
       "password": "premium123",
       "role": "user",
       "plan": "premium",
-      "license_key": "AUREXA-PREMIUM-001",
+      "license_key": "KVP-PREMIUM-001",
       "status": "active",
       "devices": []
     },
@@ -76,7 +73,7 @@
       "password": "pro123",
       "role": "user",
       "plan": "pro",
-      "license_key": "AUREXA-PRO-001",
+      "license_key": "KVP-PRO-001",
       "status": "active",
       "devices": []
     }

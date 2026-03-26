@@ -1,14 +1,25 @@
-# AUREXA Studio
+# KVP Studio Workspace
 
-Este espaco serve para voce criar seus proximos apps e programas sem baguncar o projeto principal.
-
-## Como usar
-
-1. Escolha um template em `studio/templates/`
-2. Copie a pasta do template para um novo nome
-3. Renomeie arquivos, app name e README
-4. Reaproveite o branding da pasta `branding/`
+Este espaco e o seu "laboratorio" para criar apps e programas com independencia financeira.
 
 ## Objetivo
 
-Centralizar ideias, prototipos e novos produtos da Fenix Boreal no mesmo ecossistema.
+- Construir produtos com sua marca **KVP**.
+- Publicar instaladores no Windows.
+- Conectar seus apps a API `https://aurexa-api.onrender.com`.
+- Ter uma base unica para evoluir com sua propria IA.
+
+## Fluxo recomendado
+
+1. Escolha um template em `studio/templates/`.
+2. Crie um novo app em uma pasta propria dentro de `studio/`.
+3. Defina nome, identidade visual e precificacao.
+4. Gere executavel com PyInstaller.
+5. Gere instalador via `build_release.ps1`.
+6. Ative vendas/assinaturas pela API.
+
+## Dica de monetizacao
+
+- Free: entrada e validacao do mercado.
+- Premium: recursos de produtividade e suporte.
+- Pro: licenca comercial, IA avancada e multi dispositivo.

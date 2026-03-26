@@ -1,9 +1,9 @@
-# AUREXA_BOREAL Brand Guide
+# KVP Brand Guide
 
 ## Direcao visual
 
-- Marca: forte, tecnica, confiavel e premium
-- Tom: tecnologia util, autonomia, poder e clareza
+- Marca: forte, tecnica, confiavel e focada em independencia financeira
+- Tom: tecnologia util, autonomia, crescimento e clareza
 - Uso principal: software desktop, instalador, site, painel admin e campanhas
 
 ## Cores
@@ -19,12 +19,9 @@
 - `AUREXA_BOREAL_logo.svg`: simbolo quadrado para app, favicon e avatar
 - `AUREXA_BOREAL_wordmark.svg`: logo horizontal para site, header e instalador
 
-## Ideia do simbolo
-
-O simbolo usa um `A` forte com um brilho diagonal, sugerindo tecnologia, ascensao e a ideia de "boreal".
-
 ## Recomendacoes
 
+- Use a marca KVP no nome dos apps e instaladores
 - Use o logo quadrado em executavel, instalador e perfil social
 - Use o wordmark em landing pages e cabecalhos
 - Mantenha fundo escuro para melhor contraste

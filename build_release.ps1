@@ -21,8 +21,8 @@ Remove-Item -LiteralPath (Join-Path $projectRoot "installer_output") -Recurse -F
 Write-Host "Gerando executavel com PyInstaller..."
 & $venvPyInstaller (Join-Path $projectRoot "app_main.spec")
 
-if (-not (Test-Path (Join-Path $projectRoot "dist\AUREXA_BOREAL.exe"))) {
-    throw "Executavel nao foi gerado em dist\\AUREXA_BOREAL.exe"
+if (-not (Test-Path (Join-Path $projectRoot "dist\KVP_STUDIO.exe"))) {
+    throw "Executavel nao foi gerado em dist\\KVP_STUDIO.exe"
 }
 
 $iscc = Get-Command iscc -ErrorAction SilentlyContinue

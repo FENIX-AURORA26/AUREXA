@@ -29,7 +29,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='AUREXA_BOREAL',
+    name='KVP_STUDIO',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

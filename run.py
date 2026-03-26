@@ -3,6 +3,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from config import APP_NAME
+
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -10,11 +12,11 @@ BASE_DIR = Path(__file__).resolve().parent
 def main():
     sistema = platform.system()
 
-    if sistema == "Linux":
-        print("Modo console AUREXA_BOREAL")
+    if sistema in {"Linux", "Darwin"}:
+        print(f"Modo console {APP_NAME} ({sistema})")
         alvo = BASE_DIR / "console_main.py"
     else:
-        print("Modo interface AUREXA_BOREAL")
+        print(f"Modo interface {APP_NAME} ({sistema})")
         alvo = BASE_DIR / "app_main.py"
 
     subprocess.run([sys.executable, str(alvo)], check=True)
