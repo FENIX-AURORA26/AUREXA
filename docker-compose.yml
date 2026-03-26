@@ -1,0 +1,11 @@
+services:
+  kvp-studio-server:
+    build: .
+    container_name: kvp_studio_server
+    ports:
+      - "5000:5000"
+    environment:
+      AUREXA_API_BASE_URL: "https://aurexa-api.onrender.com"
+      AUREXA_OWNER_EMAIL: "karollyne.pinheiro@fenix-boreal.com.br"
+      AUREXA_SUPPORT_TARGET: "karollyne.pinheiro@fenix-boreal.com.br"
+    restart: unless-stopped

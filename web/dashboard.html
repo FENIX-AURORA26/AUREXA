@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KVP_STUDIO Control Center</title>
+  <link rel="stylesheet" href="/dashboard/assets/dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="dashboard-rail">
+      <div class="rail-brand">
+        <span class="brand-kicker">AUREXA stack</span>
+        <h1>KVP_STUDIO</h1>
+        <p>Controle operacional da base, planos e dispositivos.</p>
+      </div>
+
+      <nav class="rail-nav">
+        <a href="#overview">Visao geral</a>
+        <a href="#live">Ao vivo</a>
+        <a href="#usuarios">Usuarios</a>
+      </nav>
+
+      <div class="rail-card">
+        <span class="rail-label">Sincronizacao</span>
+        <strong id="refresh_status">Atualizando...</strong>
+        <p>O painel consulta a API a cada 5 segundos.</p>
+      </div>
+    </aside>
+
+    <main class="dashboard-main">
+      <section id="overview" class="hero-strip">
+        <div>
+          <span class="eyebrow">Admin dashboard</span>
+          <h2>Operacao, distribuicao de planos e atividade recente em uma leitura.</h2>
+        </div>
+        <div class="hero-meta">
+          <span class="badge">Local API</span>
+          <span class="badge badge-soft" id="generated_at">Aguardando dados</span>
+        </div>
+      </section>
+
+      <section class="kpi-grid" aria-label="Metricas principais">
+        <article class="kpi">
+          <span class="kpi-label">Usuarios totais</span>
+          <strong id="users_total">0</strong>
+          <p>Base cadastrada no ambiente local.</p>
+        </article>
+        <article class="kpi">
+          <span class="kpi-label">Usuarios online</span>
+          <strong id="users_online">0</strong>
+          <p id="online_rate_copy">Taxa ativa: 0%</p>
+        </article>
+        <article class="kpi">
+          <span class="kpi-label">Dispositivos</span>
+          <strong id="devices_total">0</strong>
+          <p>Equipamentos vinculados a usuarios.</p>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <section id="live" class="surface surface-wide">
+          <div class="surface-head">
+            <div>
+              <h3>Alertas e leitura operacional</h3>
+              <p>Sinais rapidos para decidir a proxima acao comercial ou tecnica.</p>
+            </div>
+          </div>
+          <div id="alerts_list" class="alert-stack"></div>
+        </section>
+
+        <section class="surface">
+          <div class="surface-head">
+            <div>
+              <h3>Usuarios online</h3>
+              <p>Lista atual da base com status ativo.</p>
+            </div>
+          </div>
+          <ul id="online_list" class="entity-list"></ul>
+        </section>
+
+        <section class="surface">
+          <div class="surface-head">
+            <div>
+              <h3>Ultimos dispositivos</h3>
+              <p>Conexoes registradas no ambiente local.</p>
+            </div>
+          </div>
+          <ul id="recent_devices" class="entity-list"></ul>
+        </section>
+
+        <section class="surface">
+          <div class="surface-head">
+            <div>
+              <h3>Distribuicao por plano</h3>
+              <p>Mostra onde a receita pode crescer.</p>
+            </div>
+          </div>
+          <div id="plan_breakdown" class="metric-bars"></div>
+        </section>
+
+        <section class="surface">
+          <div class="surface-head">
+            <div>
+              <h3>Dispositivos por plataforma</h3>
+              <p>Panorama rapido da instalacao por sistema.</p>
+            </div>
+          </div>
+          <div id="platform_breakdown" class="metric-bars"></div>
+        </section>
+      </section>
+
+      <section id="usuarios" class="surface table-surface">
+        <div class="surface-head">
+          <div>
+            <h3>Base de usuarios</h3>
+            <p>Busca local para localizar contas, planos e perfis rapidamente.</p>
+          </div>
+          <label class="search-field">
+            <span>Buscar</span>
+            <input id="user_search" type="search" placeholder="Nome, email, plano ou perfil" />
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Plano</th>
+                <th>Status</th>
+                <th>Devices</th>
+              </tr>
+            </thead>
+            <tbody id="users_table"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/dashboard/assets/dashboard.js"></script>
+</body>
+</html>

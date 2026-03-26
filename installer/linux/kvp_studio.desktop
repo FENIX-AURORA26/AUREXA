@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=KVP_STUDIO
+Comment=Workspace KVP para criar e monetizar apps
+Exec=/opt/kvp-studio/KVP_STUDIO
+Icon=utilities-terminal
+Terminal=false
+Categories=Development;Utility;
