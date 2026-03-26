@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "AUREXA API ONLINE 🚀"
+
 licencas = {
     "CLIENTE-001": True,
     "AUREXA-OWNER-777": True
