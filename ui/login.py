@@ -13,7 +13,7 @@ class Login(QWidget):
 
         layout = QVBoxLayout()
 
-        self.label = QLabel("Digite sua licença:")
+        self.label = QLabel("Digite sua licenca:")
         self.input = QLineEdit()
         self.input.setPlaceholderText("AUREXA-XXXX-XXX")
 
@@ -30,7 +30,7 @@ class Login(QWidget):
         chave = self.input.text().strip()
 
         if not chave:
-            QMessageBox.warning(self, "Licença", "Digite uma licença para continuar.")
+            QMessageBox.warning(self, "Licenca", "Digite uma licenca para continuar.")
             return
 
         resultado = verificar_licenca(chave)
@@ -42,9 +42,9 @@ class Login(QWidget):
             return
 
         if resultado == "user":
-            QMessageBox.information(self, "Acesso liberado", "Usuário liberado com sucesso.")
+            QMessageBox.information(self, "Acesso liberado", "Usuario liberado com sucesso.")
             self.callback()
             self.close()
             return
 
-        QMessageBox.critical(self, "Licença inválida", "A licença informada é inválida.")
+        QMessageBox.critical(self, "Licenca invalida", "A licenca informada e invalida.")
