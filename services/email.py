@@ -1,8 +1,16 @@
+import os
 import smtplib
 from email.mime.text import MIMEText
+
+
 def enviar_suporte(mensagem):
-    email = "luna_site@fenix-boreal.com.br"
-    senha = "SENHA_EMAIL"
+    email = os.getenv("AUREXA_SUPPORT_EMAIL")
+    senha = os.getenv("AUREXA_SUPPORT_PASSWORD")
+
+    if not email or not senha:
+        raise RuntimeError(
+            "Defina AUREXA_SUPPORT_EMAIL e AUREXA_SUPPORT_PASSWORD antes de enviar suporte."
+        )
 
     msg = MIMEText(mensagem)
     msg["Subject"] = "Suporte AUREXA"

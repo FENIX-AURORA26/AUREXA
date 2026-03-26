@@ -13,7 +13,7 @@ licencas = {
 
 @app.route("/verificar", methods=["POST"])
 def verificar():
-    data = request.json
+    data = request.get_json(silent=True) or {}
     chave = data.get("chave")
 
     if chave in licencas:
@@ -21,4 +21,5 @@ def verificar():
     else:
         return jsonify({"status": "erro"})
 
-app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

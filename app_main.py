@@ -1,19 +1,27 @@
 import sys
-from PyQt5.QtWidgets import QApplication 
-from ui.theme import aplicar_tema
+
+from PyQt5.QtWidgets import QApplication
+
 from ui.login import Login
 from ui.main_window import MainWindow
+from ui.theme import aplicar_tema
 
-def abrir_main():
-    global janela
-    janela = MainWindow()
-    janela.show()
 
-app = QApplication(sys.argv)
-aplicar_tema(app)
+def main():
+    app = QApplication(sys.argv)
+    aplicar_tema(app)
 
-login = Login(abrir_main)
-login.show()
-input("Pressione ENTER para sair...")
+    janela = {"main": None}
 
-sys.exit(app.exec_())
+    def abrir_main():
+        janela["main"] = MainWindow()
+        janela["main"].show()
+
+    login = Login(abrir_main)
+    login.show()
+
+    return app.exec_()
+
+
+if __name__ == "__main__":
+    sys.exit(main())
