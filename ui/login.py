@@ -1,4 +1,6 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel # type: ignore
+from unittest import result
+
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel 
 from services.license import verificar_licenca
 
 class Login(QWidget):
@@ -26,8 +28,13 @@ class Login(QWidget):
     def verificar(self):
         chave = self.input.text()
 
-        if verificar_licenca(chave):
-            self.callback()
-            self.close()
-        else:
-            self.label.setText("Licença inválida!")
+if result == "admin":
+    print("👑 ACESSO DE DONA LIBERADO")
+    abrir_painel_admin() # type: ignore
+
+elif result == "user":
+    print("✅ USUÁRIO LIBERADO")
+    abrir_app_normal() # type: ignore
+
+else:
+    print("❌ LICENÇA INVÁLIDA")
