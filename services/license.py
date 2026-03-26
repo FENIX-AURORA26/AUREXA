@@ -1,23 +1,21 @@
 import requests
 
-def verificar_licenca(chave):
 
-    # 👑 DONA (ACESSO TOTAL)
+def verificar_licenca(chave):
     if chave == "AUREXA-OWNER-777":
         return "admin"
 
-    # 🌐 VERIFICA ONLINE
     try:
-        r = requests.post(
+        resposta = requests.post(
             "https://aurexa-api.onrender.com/verificar",
             json={"chave": chave},
-            timeout=5
+            timeout=5,
         )
+        resposta.raise_for_status()
 
-        if r.json()["status"] == "ok":
+        if resposta.json().get("status") == "ok":
             return "user"
-
-    except:
+    except requests.RequestException:
         pass
 
     return None
