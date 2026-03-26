@@ -6,7 +6,7 @@ def verificar_licenca(chave):
     import requests
     try:
         r = requests.post(
-            "http://127.0.0.1:5000/verificar",
+            "https://aurexa.onrender.com/verificar",
             json={"chave": chave}
         )
         return r.json()["status"] == "ok"
