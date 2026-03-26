@@ -28,13 +28,17 @@ class Login(QWidget):
     def verificar(self):
         chave = self.input.text()
 
+    def abrir_painel_admin():
+    print("PAINEL ADMIN AUREXA 🔥")
+    
+    
 if result == "admin":
     print("👑 ACESSO DE DONA LIBERADO")
-    abrir_painel_admin() # type: ignore
+    abrir_painel_admin() 
 
 elif result == "user":
     print("✅ USUÁRIO LIBERADO")
-    abrir_app_normal() # type: ignore
+    abrir_app_normal()
 
 else:
     print("❌ LICENÇA INVÁLIDA")
