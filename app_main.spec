@@ -29,7 +29,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='app_main',
+    name='AUREXA_BOREAL',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

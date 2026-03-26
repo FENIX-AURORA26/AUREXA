@@ -1,9 +1,10 @@
+from config import APP_NAME
 from core.optimizer import limpar_cache, liberar_ram
 
 
 def main():
     while True:
-        print("\nAUREXA CONSOLE")
+        print(f"\n{APP_NAME} CONSOLE")
         print("1 - Limpar Cache")
         print("2 - Liberar RAM")
         print("0 - Sair")

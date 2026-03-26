@@ -13,8 +13,8 @@ def main():
 
     janela = {"main": None}
 
-    def abrir_main():
-        janela["main"] = MainWindow()
+    def abrir_main(session):
+        janela["main"] = MainWindow(session)
         janela["main"].show()
 
     login = Login(abrir_main)

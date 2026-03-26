@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "AUREXA_BOREAL"
+  },
+  "plans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "price_brl": 0,
+      "features": [
+        "Login no desktop",
+        "Diagnostico basico",
+        "Suporte comunitario"
+      ]
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price_brl": 29.9,
+      "features": [
+        "Otimizacao completa",
+        "IA com respostas aprimoradas",
+        "Suporte prioritario"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price_brl": 79.9,
+      "features": [
+        "Todos os recursos Premium",
+        "Multi dispositivo",
+        "Relatorios e gestao avancada"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "name": "Luna Boreal",
+      "email": "luna_site@fenix-boreal.com.br",
+      "password": "AurexaBoreal@123",
+      "role": "owner",
+      "plan": "pro",
+      "license_key": "AUREXA-OWNER-777",
+      "status": "active",
+      "devices": [
+        {
+          "device_name": "test-device",
+          "platform": "Windows"
+        }
+      ]
+    },
+    {
+      "name": "Cliente Free",
+      "email": "free@fenix-boreal.com.br",
+      "password": "free123",
+      "role": "user",
+      "plan": "free",
+      "license_key": "AUREXA-FREE-001",
+      "status": "active",
+      "devices": []
+    },
+    {
+      "name": "Cliente Premium",
+      "email": "premium@fenix-boreal.com.br",
+      "password": "premium123",
+      "role": "user",
+      "plan": "premium",
+      "license_key": "AUREXA-PREMIUM-001",
+      "status": "active",
+      "devices": []
+    },
+    {
+      "name": "Cliente Pro",
+      "email": "pro@fenix-boreal.com.br",
+      "password": "pro123",
+      "role": "user",
+      "plan": "pro",
+      "license_key": "AUREXA-PRO-001",
+      "status": "active",
+      "devices": []
+    }
+  ]
+}

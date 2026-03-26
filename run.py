@@ -11,10 +11,10 @@ def main():
     sistema = platform.system()
 
     if sistema == "Linux":
-        print("Modo console")
+        print("Modo console AUREXA_BOREAL")
         alvo = BASE_DIR / "console_main.py"
     else:
-        print("Modo interface")
+        print("Modo interface AUREXA_BOREAL")
         alvo = BASE_DIR / "app_main.py"
 
     subprocess.run([sys.executable, str(alvo)], check=True)

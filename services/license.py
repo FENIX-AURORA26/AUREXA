@@ -1,21 +1,16 @@
-import requests
+from services.api_client import ApiClient, ApiClientError
 
 
-def verificar_licenca(chave):
-    if chave == "AUREXA-OWNER-777":
-        return "admin"
+def verificar_licenca(email, chave):
+    client = ApiClient()
 
     try:
-        resposta = requests.post(
-            "https://aurexa-api.onrender.com/verificar",
-            json={"chave": chave},
-            timeout=5,
-        )
-        resposta.raise_for_status()
+        resposta = client.verify_license(email, chave)
+    except ApiClientError:
+        return None
 
-        if resposta.json().get("status") == "ok":
-            return "user"
-    except requests.RequestException:
-        pass
-
-    return None
+    if resposta.get("status") != "ok":
+        return None
+    if resposta.get("role") == "owner":
+        return "admin"
+    return "user"

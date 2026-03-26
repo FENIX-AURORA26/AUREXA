@@ -2,6 +2,8 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 
+from config import APP_NAME, SUPPORT_EMAIL
+
 
 def enviar_suporte(mensagem):
     email = os.getenv("AUREXA_SUPPORT_EMAIL")
@@ -13,9 +15,9 @@ def enviar_suporte(mensagem):
         )
 
     msg = MIMEText(mensagem)
-    msg["Subject"] = "Suporte AUREXA"
+    msg["Subject"] = f"Suporte {APP_NAME}"
     msg["From"] = email
-    msg["To"] = "suporte@fenix-boreal.com.br"
+    msg["To"] = SUPPORT_EMAIL
 
     server = smtplib.SMTP_SSL("smtp.umbler.com", 465)
     server.login(email, senha)
