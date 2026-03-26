@@ -1,7 +1,7 @@
-from unittest import result
+from PyQt5.QtWidgets import QLabel, QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget
 
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLineEdit, QPushButton, QLabel 
 from services.license import verificar_licenca
+
 
 class Login(QWidget):
     def __init__(self, sucesso_callback):
@@ -15,8 +15,9 @@ class Login(QWidget):
 
         self.label = QLabel("Digite sua licença:")
         self.input = QLineEdit()
-        self.botao = QPushButton("Entrar")
+        self.input.setPlaceholderText("AUREXA-XXXX-XXX")
 
+        self.botao = QPushButton("Entrar")
         self.botao.clicked.connect(self.verificar)
 
         layout.addWidget(self.label)
@@ -26,19 +27,24 @@ class Login(QWidget):
         self.setLayout(layout)
 
     def verificar(self):
-        chave = self.input.text()
+        chave = self.input.text().strip()
 
-    def abrir_painel_admin():
-    print("PAINEL ADMIN AUREXA 🔥")
-    
-    
-if result == "admin":
-    print("👑 ACESSO DE DONA LIBERADO")
-    abrir_painel_admin() 
+        if not chave:
+            QMessageBox.warning(self, "Licença", "Digite uma licença para continuar.")
+            return
 
-elif result == "user":
-    print("✅ USUÁRIO LIBERADO")
-    abrir_app_normal()
+        resultado = verificar_licenca(chave)
 
-else:
-    print("❌ LICENÇA INVÁLIDA")
+        if resultado == "admin":
+            QMessageBox.information(self, "Acesso liberado", "Acesso de administrador liberado.")
+            self.callback()
+            self.close()
+            return
+
+        if resultado == "user":
+            QMessageBox.information(self, "Acesso liberado", "Usuário liberado com sucesso.")
+            self.callback()
+            self.close()
+            return
+
+        QMessageBox.critical(self, "Licença inválida", "A licença informada é inválida.")
