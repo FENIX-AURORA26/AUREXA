@@ -53,3 +53,6 @@ class ApiClient:
 
     def list_plans(self):
         return self._request("GET", "/plans")
+
+    def list_licenses(self, email):
+        return self._request("GET", "/licenses", params={"email": email})
