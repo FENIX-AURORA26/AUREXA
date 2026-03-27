@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 
 <html>
-<body style="background:#020617;color:white;font-family:sans-serif">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body style="background:#020617;color:white;text-align:center">
 
-<h1>Painel Admin</h1>
+<h1>Dashboard AUREXA</h1>
 
-<button onclick="carregar()">Ver usuários</button>
-
-<ul id="lista"></ul>
+<canvas id="grafico"></canvas>
 
 <script>
-function carregar(){
-fetch("http://127.0.0.1:8000/users")
+fetch("http://127.0.0.1:8000/stats")
 .then(r=>r.json())
 .then(data=>{
-let lista = document.getElementById("lista")
-lista.innerHTML=""
-data.forEach(u=>{
-let li = document.createElement("li")
-li.innerText = u.email
-lista.appendChild(li)
-})
-})
+new Chart(document.getElementById("grafico"),{
+type:"bar",
+data:{
+labels:["Free","Pro"],
+datasets:[{
+data:[data.free,data.pro]
+}]
 }
+})
+})
 </script>
 
 </body>
