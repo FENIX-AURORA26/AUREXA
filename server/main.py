@@ -5,6 +5,7 @@ import jwt
 from datetime import datetime, timedelta
 from database import engine
 from models import Base
+from security import hash_senha, verificar_senha
 Base.metadata.create_all(bind=engine)
 app = FastAPI()
 stripe.api_key = "SUA_SECRET_KEY"
