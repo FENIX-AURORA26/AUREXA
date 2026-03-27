@@ -8,53 +8,58 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #e2e8f0;
-    text-align: center;
+    margin:0;
+    font-family:Segoe UI;
+    background:#020617;
+    color:#e2e8f0;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
+header {
+    padding:40px;
+    text-align:center;
 }
 
 h1 {
-    font-size: 48px;
-    color: #38bdf8;
+    font-size:60px;
+    color:#38bdf8;
 }
 
-h2 {
-    color: #94a3b8;
+.hero {
+    text-align:center;
+    padding:60px 20px;
+}
+
+.btn {
+    background:#2563eb;
+    padding:15px 25px;
+    border:none;
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.section {
+    padding:60px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 .card {
-    background: #1e293b;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background:#0f172a;
+    padding:25px;
+    border-radius:16px;
+    width:280px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-button {
-    background: #2563eb;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 10px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1d4ed8;
-}
-
-.status {
-    margin-top: 20px;
-    font-size: 18px;
+footer {
+    text-align:center;
+    padding:40px;
+    color:#64748b;
 }
 </style>
 
@@ -62,37 +67,41 @@ button:hover {
 
 <body>
 
-<div class="container">
-    <h1>AUREXA</h1>
-    <h2>Sistema Inteligente Boreal</h2>
+<header>
+<h1>AUREXA</h1>
+<p>Sistema Inteligente Boreal</p>
+</header>
 
-```
+<div class="hero">
+<h2>Automação, Inteligência e Controle</h2>
+<p>Uma plataforma desktop + API + segurança avançada</p>
+<button class="btn" onclick="comprar()">Começar Agora</button>
+</div>
+
+<div class="section">
 <div class="card">
-    <h3>Status da API</h3>
-    <button onclick="checkAPI()">Verificar</button>
-    <div id="status" class="status">Aguardando...</div>
+<h3>⚡ Rápido</h3>
+<p>Alta performance com API dedicada</p>
 </div>
 
 <div class="card">
-    <h3>Sobre</h3>
-    <p>Plataforma desktop + API + sistema de autenticação inteligente.</p>
+<h3>🔐 Seguro</h3>
+<p>Login com token e validação</p>
 </div>
-```
 
+<div class="card">
+<h3>💼 Escalável</h3>
+<p>Pronto para milhares de usuários</p>
 </div>
+</div>
+
+<footer>
+© 2026 AUREXA
+</footer>
 
 <script>
-function checkAPI() {
-    document.getElementById("status").innerText = "Verificando...";
-
-    fetch("https://aurexa-api.onrender.com")
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("status").innerText = "✅ " + data.message;
-    })
-    .catch(() => {
-        document.getElementById("status").innerText = "❌ API offline";
-    });
+function comprar(){
+    window.location.href="checkout.html";
 }
 </script>
 

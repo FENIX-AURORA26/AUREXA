@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://js.stripe.com/v3/"></script>
+</head>
+<body style="background:#020617;color:white;text-align:center;padding:100px">
+
+<h1>Plano Pro</h1>
+<button id="checkout">Pagar</button>
+
+<script>
+var stripe = Stripe("SUA_PUBLIC_KEY");
+
+document.getElementById("checkout").addEventListener("click", function () {
+  fetch("/create-checkout-session", {method: "POST"})
+    .then(res => res.json())
+    .then(data => stripe.redirectToCheckout({ sessionId: data.id }));
+});
+</script>
+
+</body>
+</html>
