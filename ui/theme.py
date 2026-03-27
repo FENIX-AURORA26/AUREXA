@@ -1,4 +1,4 @@
-from pickle import APPEND
+import pickle
 
 
 def apply_theme(app):
