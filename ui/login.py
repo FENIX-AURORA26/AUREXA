@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QLabel, QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget # type: ignore
+from PyQt5.QtWidgets import QLabel, QLineEdit, QMessageBox, QPushButton, QVBoxLayout, QWidget
 
 from config import APP_NAME, SUPPORT_EMAIL
 from services.api_client import ApiClient, ApiClientError
