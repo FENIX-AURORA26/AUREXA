@@ -2,7 +2,7 @@ import platform
 
 import requests
 
-from config import APP_NAME, LOCAL_API_BASE_URL, REMOTE_API_BASE_URL
+import config
 
 
 class ApiClientError(Exception):
@@ -11,7 +11,7 @@ class ApiClientError(Exception):
 
 class ApiClient:
     def __init__(self, base_urls=None, timeout=6):
-        self.base_urls = base_urls or [REMOTE_API_BASE_URL, LOCAL_API_BASE_URL]
+        self.base_urls = base_urls or [config.REMOTE_API_BASE_URL, config.LOCAL_API_BASE_URL]
         self.timeout = timeout
 
     def _request(self, method, endpoint, **kwargs):
@@ -39,7 +39,7 @@ class ApiClient:
             json={
                 "email": email,
                 "password": password,
-                "device_name": platform.node() or APP_NAME,
+                "device_name": platform.node() or config.APP_NAME,
                 "platform": platform.system(),
             },
         )
