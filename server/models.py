@@ -1,12 +1,9 @@
 from sqlalchemy import Column, Integer, String
-from database import Base
+from .database import Base
 
 class User(Base):
-**tablename** = "users"
-
-```
-id = Column(Integer, primary_key=True)
-email = Column(String, unique=True)
+id: Column[int] = Column(Integer, primary_key=True, index=True)
+email = Column(String, unique=True, index=True)
 senha = Column(String)
-plano = Column(String)
-```
+plano = Column(String, default="free")
+
