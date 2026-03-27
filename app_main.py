@@ -22,6 +22,12 @@ def main():
 
     return app.exec_()
 
+import requests
 
-if __name__ == "__main__":
-    sys.exit(main())
+def validar():
+    try:
+        r = requests.get("")
+        if r.status_code != 200:
+            exit()
+    except:
+        exit()

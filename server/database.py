@@ -4,6 +4,9 @@ import sqlalchemy.orm
 @app.get("/stats")
 def stats():
     return {"free":10,"pro":5}
+@app.get("/validar")
+def validar():
+    return {"status":"ok"}
 
 DATABASE_URL = "sqlite:///./aurexa.db"
 
