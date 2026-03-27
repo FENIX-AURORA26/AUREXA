@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUREXA</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+
+h2 {
+    color: #94a3b8;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+button {
+    background: #2563eb;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h1>AUREXA</h1>
+    <h2>Sistema Inteligente Boreal</h2>
+
+```
+<div class="card">
+    <h3>Status da API</h3>
+    <button onclick="checkAPI()">Verificar</button>
+    <div id="status" class="status">Aguardando...</div>
+</div>
+
+<div class="card">
+    <h3>Sobre</h3>
+    <p>Plataforma desktop + API + sistema de autenticação inteligente.</p>
+</div>
+```
+
+</div>
+
+<script>
+function checkAPI() {
+    document.getElementById("status").innerText = "Verificando...";
+
+    fetch("https://aurexa-api.onrender.com")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("status").innerText = "✅ " + data.message;
+    })
+    .catch(() => {
+        document.getElementById("status").innerText = "❌ API offline";
+    });
+}
+</script>
+
+</body>
+</html>
