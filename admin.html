@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<body style="background:#020617;color:white;font-family:sans-serif">
+
+<h1>Painel Admin</h1>
+
+<button onclick="carregar()">Ver usuários</button>
+
+<ul id="lista"></ul>
+
+<script>
+function carregar(){
+fetch("http://127.0.0.1:8000/users")
+.then(r=>r.json())
+.then(data=>{
+let lista = document.getElementById("lista")
+lista.innerHTML=""
+data.forEach(u=>{
+let li = document.createElement("li")
+li.innerText = u.email
+lista.appendChild(li)
+})
+})
+}
+</script>
+
+</body>
+</html>
