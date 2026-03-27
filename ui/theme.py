@@ -1,6 +1,5 @@
 import pickle
 
-
 def apply_theme(app):
     app.setStyleSheet("""
 QWidget {
